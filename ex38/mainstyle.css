@@ -1,0 +1,30 @@
+body {
+    background-color: white;
+    margin: 20px;
+}
+.season {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    float: left;
+    box-sizing: border-box;
+}
+.season h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: royalblue;
+    margin: 0 0 10px 0;
+}
+.spring {
+    background-color: violet;
+}
+.summer {
+    background-color: sandybrown;
+}
+.autumn {
+    background-color: yellow;
+    clear: both;
+}
+.winter {
+    background-color: lightgray;
+}
