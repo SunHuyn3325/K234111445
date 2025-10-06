@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Exercise 53 - Hồ Ngọc Xuân Quyên</title>
+    <style>
+        table
+        {
+            text-align: center;
+        }
+        button
+        {
+            background-color: gold;
+            color:white;
+            width: 60px;   
+        } 
+    </style>
+    <script type="text/javascript">
+        function calculateTotal() {
+            var qty1 = parseFloat(document.getElementById("qty1").value) || 0;
+            var qty2 = parseFloat(document.getElementById("qty2").value) || 0;
+            var qty3 = parseFloat(document.getElementById("qty3").value) || 0;
+
+            var price1 = parseFloat(document.getElementById("price1").innerText);
+            var price2 = parseFloat(document.getElementById("price2").innerText);
+            var price3 = parseFloat(document.getElementById("price3").innerText);
+
+            var item1 = qty1 * price1;
+            var item2 = qty2 * price2;
+            var item3 = qty3 * price3;
+
+            document.getElementById("item1").value = item1.toFixed(2) + "$";
+            document.getElementById("item2").value = item2.toFixed(2) + "$";
+            document.getElementById("item3").value = item3.toFixed(2) + "$";
+
+            var total = item1 + item2 + item3;
+            document.getElementById("total").value = total.toFixed(2) + "$";
+        }
+
+        window.onload = function() {
+            document.getElementById("sum").addEventListener("click", calculateTotal);
+        };
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <b>
+                    <th>Part Number</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Item table</th>
+                </b>
+            </tr>
+            <tr>
+                <td>C112</td>
+                <td>Mouse</td>
+                <td name="price1" id="price1">19.95$</td>
+                <td><input type="text" name="qty1" id="qty1"></td>
+                <td><input type="text" name="item1" id="item1"></td>
+            </tr>
+            <tr>
+                <td>B124</td>
+                <td>Keyboard US</td>
+                <td name="price2" id="price2">29.95$</td>
+                <td><input type="text" name="qty2" id="qty2"></td>
+                <td><input type="text" name="item2" id="item2"></td>
+            </tr>
+            <tr>
+                <td>U125</td>
+                <td>USB KingMax</td>
+                <td name="price3" id="price3">39.95$</td>
+                <td><input type="text" name="qty3" id="qty3"></td>
+                <td><input type="text" name="item3" id="item3"></td>
+            </tr>
+            <tr>
+                <td colspan="5" style="border-top:1px solid black;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="right">Total:</td>
+                <td><input type="text" name="total" id="total"></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td align="right">
+                    <button type="button" name="sum"id="sum">Sum</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+        
+    </form>
+
+</body>
+</html>
